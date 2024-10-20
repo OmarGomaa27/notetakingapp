@@ -43,3 +43,7 @@ viewNotes();
 deleteNote(1);
 editNote(2, "Updated Second Note", "This is the updated content.");
 viewNotes();
+addNote("Test", "This is the test of the final added note");
+viewNotes();
+editNote(2, "test", "new !!");
+viewNotes();
