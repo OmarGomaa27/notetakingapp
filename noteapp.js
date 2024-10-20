@@ -1,3 +1,18 @@
+const readline = require('require');
+const r1 = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+function startApp(){
+    console.log("Welcome to my first JavaScript App :) ");
+    console.log("1. ADD NOTE");
+    console.log("2. VIEW NOTES");
+    console.log("3. EDIT NOTE");
+    console.log("4. DELETE NOTE");
+    console.log("5. SEARCH NOTE");
+    console.log("6. EXIT");
+}
+//add options
 const notes = [];
 
 function addNote(title, content) {
