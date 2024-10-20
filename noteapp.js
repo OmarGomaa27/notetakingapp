@@ -1,8 +1,8 @@
-const notes = []; // Array to store notes
+const notes = [];
 
 function addNote(title, content) {
     const note = {
-        id: notes.length + 1, // Unique ID for each note
+        id: notes.length + 1,
         title: title,
         content: content,
     };
@@ -36,7 +36,7 @@ function editNote(id, newTitle, newContent) {
     }
 }
 
-// Example usage
+
 addNote("First Note", "This is the content of the first note.");
 addNote("Second Note", "This is the content of the second note.");
 viewNotes();
