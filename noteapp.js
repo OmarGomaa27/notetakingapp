@@ -1,9 +1,16 @@
-const readline = require('readline'); // Corrected the require
-
+const fs = require('fs');
+const { stringify } = require('querystring');
+const readline = require('readline'); 
+const { json } = require('stream/consumers');
 const r1 = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
+const filePath ='./notes.json';
+function saveNotes() {
+    fs.writeFileSync(filePath, JSON.stringify(notes, null, 2), 'utf8');
+}
+
 
 function startApp(){
     console.log("Welcome to my first JavaScript App :) ");
@@ -75,6 +82,7 @@ function addNote(title, content) {
         content: content,
     };
     notes.push(note);
+    saveNotes();
 }
 
 function viewNotes() {
